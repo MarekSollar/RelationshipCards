@@ -1,24 +1,22 @@
-var clickCount = 0;
 let questions = [];
-var num = 0;
+
 fetch("test.json")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((entry) => {
       questions.push(entry.question);
-      questions.sort(() => Math.random() - 0.5);
     });
+    questions.sort(() => Math.random() - 0.5);
+    spawnCard();
   })
   .catch((error) => {
     console.error("Error fetching quotes:", error);
   });
 
-document.addEventListener("DOMContentLoaded", () => {
-  spawnCard();
-});
+document.addEventListener("DOMContentLoaded", () => {});
 
 function spawnCard() {
-  const cards = document.body.querySelector("div.cards");
+  const cards = document.querySelector("div.cards");
   const figure = document.createElement("figure");
   figure.classList.add("card", "active");
   var figcaption = document.createElement("figcaption");
@@ -32,6 +30,9 @@ function spawnCard() {
   cards.appendChild(figure);
   figure.addEventListener("click", cardClick);
 }
+
+let clickCount = 0;
+let num = 0;
 
 const cardClick = (event) => {
   const card = event.currentTarget;
@@ -52,9 +53,13 @@ const cardClick = (event) => {
     clickCount++;
   }
 };
+
 function toggleCardDone(clickedCard) {
-  const doneContainer = document.body.querySelector("div.done-container");
+  const doneContainer = document.querySelector("div.done-container");
   void clickedCard.offsetWidth;
+  const rect = doneContainer.getBoundingClientRect();
   clickedCard.classList.add("card-done");
+  clickedCard.style.transition = "transform 0.3s ease";
+  clickedCard.style.transform = `translate(${rect.left}px, ${rect.top}px)`;
   doneContainer.appendChild(clickedCard);
 }
