@@ -6,6 +6,7 @@ fetch("test.json")
   .then((data) => {
     data.forEach((entry) => {
       questions.push(entry.question);
+      questions.sort(() => Math.random() - 0.5);
     });
   })
   .catch((error) => {
@@ -23,12 +24,9 @@ function spawnCard() {
   var figcaption = document.createElement("figcaption");
   figcaption.classList.add("face");
   var span = document.createElement("span");
-  //   span.textContent = "test";
   figcaption.appendChild(span);
-
   var div = document.createElement("div");
   div.classList.add("back");
-
   figure.appendChild(figcaption);
   figure.appendChild(div);
   cards.appendChild(figure);
@@ -36,8 +34,11 @@ function spawnCard() {
 }
 
 const cardClick = (event) => {
-  //   console.log(clickCount);
   const card = event.currentTarget;
+  if (card.classList.contains("card-done")) {
+    return;
+  }
+
   if (clickCount === 0 && !card.classList.contains("turned")) {
     card.classList.toggle("turned");
     card.querySelector("figcaption span").textContent = questions[num];
@@ -52,21 +53,8 @@ const cardClick = (event) => {
   }
 };
 function toggleCardDone(clickedCard) {
-  // Get the container where the card will be moved
   const doneContainer = document.body.querySelector("div.done-container");
-
-  // Check if the clicked card already has the card-done class
-  if (!clickedCard.classList.contains("card-done")) {
-    // Add the card-done class to the clicked card
-    clickedCard.classList.add("card-done");
-
-    // Append the clicked card to the done container
-    doneContainer.appendChild(clickedCard);
-  } else {
-    // If the clicked card already has the card-done class, remove it
-    clickedCard.classList.remove("card-done");
-
-    // Move the card back to its original container
-    document.querySelector(".cards-container").appendChild(clickedCard);
-  }
+  void clickedCard.offsetWidth;
+  clickedCard.classList.add("card-done");
+  doneContainer.appendChild(clickedCard);
 }

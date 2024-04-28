@@ -13,5 +13,6 @@
   position: absolute;
   top: 0;
   left: 0;
+  transition: top 0.3s ease, left 0.3s ease;
   z-index: 1; /* Ensure cards stack on top of each other */
 }
