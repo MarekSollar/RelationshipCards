@@ -1,0 +1,17 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.done-container {
+  position: relative;
+}
+
+.done-container .card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure cards stack on top of each other */
+}
