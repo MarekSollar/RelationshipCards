@@ -26,13 +26,14 @@ html {
   align-items: center;
   height: 100%;
   aspect-ratio: 2/3;
-  height: 15em;
+  height: 30em;
   background-color: whitesmoke;
   border-radius: 20px;
+  text-align: center;
 }
 
 .done-container {
-  height: 15em;
+  height: 30em;
   display: flex;
   margin: 5vh;
   justify-content: center;
@@ -42,7 +43,8 @@ html {
 }
 
 .face {
-  background-image: url("../images/front.svg");
+  background-color: lightpink;
+  border-radius: 20px;
   background-repeat: no-repeat;
   background-size: contain;
   aspect-ratio: 2/3;
@@ -59,7 +61,8 @@ html {
 
 .back {
   aspect-ratio: 2/3;
-  background-image: url(../images/backsvg.svg);
+  border-radius: 20px;
+  background-color: lightpink;
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
