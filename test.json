@@ -6,9 +6,6 @@
     "question": "Kdyby jsi mohla na našem vztahu cokoliv zlepšit, co by to bylo?"
   },
   {
-    "question": "Kdyby jsi se mohla vrátit zpět do minulosti a něco na našem vztahu změnit, tak co by to bylo?"
-  },
-  {
     "question": "Jaké byly hlavní kritéria při výběru partnera a proč sis zrovna vybrala mě?"
   },
   {
@@ -23,19 +20,7 @@
     "question": "Jaká písnička tě napadne první, když si na mě vzpomeneš?"
   },
   {
-    "question": "Brečela jsi někdy, když jsme si spolu psali?"
-  },
-  {
-    "question": "Jaká je ta nejkrásnější zpráva, kterou jsem ti kdy napsal?"
-  },
-  {
     "question": "Na jakou společnou vzpomínku nikdy nezapomeneš?"
-  },
-  {
-    "question": "Pod jakým názvem mě máš uloženého v telefonu?"
-  },
-  {
-    "question": "Jaké je tvé nejoblíbenější jídlo?"
   },
   {
     "question": "Jaké je tvé nejoblíbenější pití?"
@@ -56,9 +41,6 @@
     "question": "Jaké je tvé nejoblíbenější místo na celém světě?"
   },
   {
-    "question": "Máš nějaké oblíbené auto, které by sis přála vlastnit?"
-  },
-  {
     "question": "Jak by sis zařídila vlastní domov?"
   },
   {
@@ -66,6 +48,9 @@
   },
   {
     "question": "Je něco co se ti na mém vzhledu nelíbí?"
+  },
+  {
+    "question": "Co sis myslela, že ti dám (ještě před tím, než jsi dostala toho medvěda)?"
   },
   {
     "question": "Co mohu udělat pro to, abych se ti více líbil?"
